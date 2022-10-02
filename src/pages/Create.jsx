@@ -68,13 +68,16 @@ function Create() {
     // Actual network call to store in DB
     if (search.get('edit')) {
       const newEvents = [...events];
-      newEvents[search.get('edit')] = { ...formData };
+      newEvents[search.get('edit')] = {
+        ...formData,
+        id: search.get('edit'),
+      };
       updateEvent([...newEvents]);
       toast.success('Event updated successfully');
 
       navigate(`/event/${search.get('edit')}`);
     } else {
-      addEvent({ ...formData, is: events.length });
+      addEvent({ ...formData, id: events.length });
       toast.success('Event created successfully');
       // Navigate to the page
       navigate(`/event/${events.length}`);

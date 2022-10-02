@@ -4,6 +4,7 @@ import Fallback from './components/Fallback';
 const Home = React.lazy(() => import('./pages/Home'));
 const Event = React.lazy(() => import('./pages/Event'));
 const Create = React.lazy(() => import('./pages/Create'));
+const Events = React.lazy(() => import('./pages/Events'));
 function router() {
   return (
     <BrowserRouter>
@@ -29,6 +30,14 @@ function router() {
           element={
             <React.Suspense fallback={<Fallback />}>
               <Create />
+            </React.Suspense>
+          }
+        ></Route>
+        <Route
+          path='/events'
+          element={
+            <React.Suspense fallback={<Fallback />}>
+              <Events />
             </React.Suspense>
           }
         ></Route>
