@@ -2,6 +2,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .loader {
@@ -26,10 +32,134 @@
 }
 
 
+.home_big,
+.home_small {
+  background: linear-gradient(0deg, #F6F2FF, #F6F2FF), #FBFAFF;
+  ;
+  height: 100vh;
+  overflow: hidden;
+  padding: 100px 0px;
+}
+
+.home_small {
+  display: none;
+  padding: 30px 0px;
+
+}
+
 .page_center {
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.image img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  padding-right: 130px;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 64px;
+  text-align: right;
+  color: #240D57;
+}
+
+.text_gradient {
+  line-height: 74px;
+  background: linear-gradient(90deg, #8456EC 24.2%, #E87BF8 120.46%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subHeading {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: right;
+  color: #4F4F4F;
+}
+
+.action {
+  border: none;
+  outline: none;
+  width: 320px;
+  height: 55px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #8456EC 3.25%, #E87BF8 100%);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+}
+
+
+
+.action:active {
+  transform: scale(0.95);
+}
+
+@media(max-width:992px) {
+  .home_small {
+    display: block;
+  }
+
+  .home_big {
+    display: none;
+  }
+
+  .row {
+    justify-content: center;
+  }
+
+  .heading {
+    text-align: center;
+    font-size: 40px;
+    line-height: 10px;
+    width: 573px;
+  }
+
+  .subHeading {
+    width: 440px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 16px;
+  }
+
+  .image {
+    height: auto;
+  }
+
+  .image img {
+    width: 250px;
+    object-fit: contain;
+  }
+
+  .action {
+    margin-top: 16px;
+    width: 270px;
+    height: 45px;
+    font-size: 18px;
+  }
+
 }
