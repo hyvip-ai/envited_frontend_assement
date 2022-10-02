@@ -17,7 +17,7 @@ function router() {
           }
         ></Route>
         <Route
-          path='/event'
+          path='/event/:id'
           element={
             <React.Suspense fallback={<Fallback />}>
               <Event />
